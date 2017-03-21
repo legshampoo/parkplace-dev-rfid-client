@@ -1,3 +1,11 @@
+45 Park Place Dev RFID Client
+
+this is the dev client for sending RFID messages to parkplace-master.  
+
+
+
+
+
 yarnpkg start
     Starts the development server.
 
