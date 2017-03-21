@@ -1,0 +1,22 @@
+{
+  "name": "parkplace-dev-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "ws": "^2.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "nodemon": "^1.11.0",
+    "react-scripts": "0.9.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"PORT=3001 react-scripts start\" \"nodemon server.js\""
+  }
+}
