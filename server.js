@@ -27,8 +27,10 @@ console.log('websocket server started on port: ' + port);
 
 var tcpClient = new net.Socket();
 var tcpPort = 5550;
+var address = '127.0.0.1';  //localhost
+// var address = '192.168.45.122';  //on site mac mini
 
-tcpClient.connect(tcpPort, '127.0.0.1', function(){
+tcpClient.connect(tcpPort, address, function(){
   console.log('Connected');
   var data = "{\"message\": \"Token Controller Requesting Connection\"}"
   // tcpClient.write('Hello from Token TCP Server');

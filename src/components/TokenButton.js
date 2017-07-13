@@ -32,11 +32,20 @@ class TokenButton extends React.Component {
     this.setState({ active: !this.state.active }, function(){
       // var msg = this.props.message + '-' + this.state.active.toString();
       // var msg = "{\"token\": \"" + this.props.reference + "\", \"active\": \"" + this.state.active.toString() + "\"}";
-      var msg = "{\"tag\":" + this.props.reference + ",\"status\":" + this.state.active.toString() + "}";
+      //correct //var msg = "{\"tag\":" + this.props.reference + ",\"status\":" + this.state.active.toString() + "}";
+
+      // var bool = this.state.active.toString();
+      var status = this.state.active.toString();
+
+      var msg = {
+        "tag": this.props.reference,
+        "status": status
+      }
+
       // var msg = "{\"test\": \"testmessage\", \"activated\": \"truz\"}";
 
-      // this.socket.send(JSON.stringify(msg));
-      this.socket.send(msg);
+      this.socket.send(JSON.stringify(msg));
+      // this.socket.send(msg);
     });
 
   }
